@@ -13,11 +13,11 @@ local Translations = {
     nozzle_cannot_reach = "La buse ne peut pas aller aussi loin!",
     station_no_fuel = "Cette station est en panne de carburant!",
     station_not_enough_fuel = "La station n'a pas autant de carburant!",
+    show_input_key_special = "Appuyez sur [G] près du véhicule pour le ravitailler!",
     tank_cannot_fit = "Votre réservoir ne peut pas s'adapter à cela!",
     tank_already_full = "Votre véhicule est déjà plein !",
     need_electric_charger = "Vous avez besoin d'aller à un chargeur électrique!",
     cannot_refuel_inside = "Vous ne pouvez pas faire le plein depuis l'intérieur du véhicule!",
-    vehicle_is_damaged = "Le véhicule est trop endommagé pour faire le plein!",
 
     -- 2.1.2 -- Récupération des réserves ---
     fuel_order_ready = "Votre commande de carburant est disponible pour récupération ! Consultez votre GPS pour trouver l'endroit de récupération !",
@@ -28,6 +28,7 @@ local Translations = {
 
     -- 2.1.0
     no_nozzle = "Vous n'avez pas de buse !",
+    vehicle_is_damaged = "Le véhicule est trop endommagé pour faire le plein!",
     vehicle_too_far = "Vous êtes trop loin pour ravitailler ce véhicule !",
     inside_vehicle = "Vous ne pouvez pas faire le plein depuis l'intérieur du véhicule !",
     you_are_discount_eligible = "Si vous êtes en service, vous pourriez bénéficier d'une réduction de "..Config.EmergencyServicesDiscount['discount'].."% !",
