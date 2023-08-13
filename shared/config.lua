@@ -1,19 +1,19 @@
 Config = {}
 Config.FuelDebug = false -- Used for debugging, although there are not many areas in yet (Default: false) + Enables Setfuel Commands (0, 50, 100). 
 Config.PolyDebug = false -- Enables Polyzone Debugging to see PolyZones!
-Config.ShowNearestGasStationOnly = true -- When enabled, only the nearest gas stations will be shown on the map.
-Config.LeaveEngineRunning = false -- When true, the vehicle's engine will be left running upon exit if the player *HOLDS* F.
+Config.ShowNearestGasStationOnly = false -- When enabled, only the nearest gas stations will be shown on the map.
+Config.LeaveEngineRunning = true -- When true, the vehicle's engine will be left running upon exit if the player *HOLDS* F.
 Config.VehicleBlowUp = true -- When true, there will be a configurable chance of the vehicle blowing up, if you fuel while the engine is on.
 Config.BlowUpChance = 5 -- Percentage for Chance of Engine Explosion (Default: 5% or 5)
 Config.CostMultiplier = 3 -- Amount to multiply 1 by. This indicates fuel price. (Default: $3.0/l or 3.0)
-Config.GlobalTax = 15.0 -- The tax, in %, that people will be charged at the pump. (Default: 15% or 15.0)
+Config.GlobalTax = 10.0 -- The tax, in %, that people will be charged at the pump. (Default: 15% or 15.0)
 Config.FuelNozzleExplosion = false -- When true, it enables the fuel pump exploding when players run away with the nozzle. Highly recommeded to be false.
 Config.FuelDecor = "_FUEL_LEVEL" -- Do not touch! (Default: "_FUEL_LEVEL")
 Config.RefuelTime = 600 -- Highly recommended to leave at 600. This value will be multiplied times the amount the player is fueling for the progress bar and cancellation logic! DON'T GO BELOW 250, performance WILL drop!
 Config.FuelTargetExport = false -- DO NOT USE WITH OX_TARGET! This is only used to fix this qb-target issue: https://github.com/CodineDev/cdn-fuel/issues/3. <br> <br> If you don't have this issue and haven't installed this exports in qb-target, then this should be false. Otherwise there will be an error.
 
 -- 2.1.1 Update --
-Config.OwnersPickupFuel = false -- If an owner buys fuel, they will have to go pick it up at a configured location.
+Config.OwnersPickupFuel = true -- If an owner buys fuel, they will have to go pick it up at a configured location.
 Config.PossibleDeliveryTrucks = {
     "hauler",
     "phantom",
@@ -44,8 +44,8 @@ Config.EmergencyServicesDiscount = {
     ['ondutyonly'] = true, -- Discount only applies while on duty.
     ['job'] = {
         "police",
-        "sasp",
-        "trooper",
+        --"sasp",
+        --"trooper",
         "ambulance",
     }
 }
@@ -57,8 +57,8 @@ Config.Ox = {
     DrawText = false, -- Uses Ox DrawText instead of qb-core DrawText.
     Progress = false -- Uses Ox ProgressBar instead of progressbar.
 }
-Config.TargetResource = "qb-target" -- Supported: { 'qb-target', 'ox_target'} -- Others must use the same format as QB-Target or manual configuration is required.
-Config.PumpHose = false -- If true, it creates a hose from the pump to the nozzle the client is holding, to give it a more realistic feel.
+Config.TargetResource = "ox_target" -- Supported: { 'qb-target', 'ox_target'} -- Others must use the same format as QB-Target or manual configuration is required.
+Config.PumpHose = true -- If true, it creates a hose from the pump to the nozzle the client is holding, to give it a more realistic feel.
 Config.RopeType = { -- Options: 1-2-3-4-5; 1: Khaki Color, Kind of Thick, 2: Very Thick Khaki Rope, 3: Very Thick Black Rope, 4: Very Thin Black Rope, 5: Same as 3
     ['fuel'] = 1,
     ['electric'] = 1,
@@ -80,17 +80,17 @@ Config.VehicleShutoffOnLowFuel = { -- If enabled, vehicles will turn off when th
 Config.RenewedPhonePayment = false -- Enables use of Renewed-Phone Payment System and Notifications
 
 -- Syphoning --
-Config.UseSyphoning = false -- Follow the Syphoning Install Guide to enable this option!
+Config.UseSyphoning = true -- Follow the Syphoning Install Guide to enable this option!
 Config.SyphonDebug = false -- Used for Debugging the syphon portion!
 Config.SyphonKitCap = 50 -- Maximum amount (in L) the syphon kit can fit!
-Config.SyphonPoliceCallChance = 25 -- Math.Random(1, 100) Default: 25%
+Config.SyphonPoliceCallChance = 10 -- Math.Random(1, 100) Default: 25%
 Config.SyphonDispatchSystem = "ps-dispatch" -- Options: "ps-dispatch", "qb-dispatch", "qb-default" (just blips) or "custom" (Custom: you must configure yourself!)
 
 --- Jerry Can -----
 Config.UseJerryCan = true -- Enable the Jerry Can functionality. Will only work if properly installed.
 Config.JerryCanCap = 50 -- Maximum amount (in L) the jerrycan can fit! (Default: 50L)
 Config.JerryCanPrice = 200 -- The price of a jerry can, not including tax.
-Config.JerryCanGas = 25 -- The amount of Gas that the Jerry Can you purchase comes with. This should not be bigger that your Config.JerryCanCap!
+Config.JerryCanGas = 10 -- The amount of Gas that the Jerry Can you purchase comes with. This should not be bigger that your Config.JerryCanCap!
 
 -- Animations --
 Config.StealAnimDict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@'-- Used for Syphoning
@@ -103,9 +103,9 @@ Config.RefuelAnimationDictionary = "timetable@gardener@filling_can" -- This is f
 --- Player Owned Gas (Gasoline) Ergonomic Refueling Stations (Poggers) ---
 Config.PlayerOwnedGasStationsEnabled = true -- When true, peds will be located at all gas stations, and players will be able to talk with peds & purchase gas stations, having to manage fuel supplies.
 Config.StationFuelSalePercentage = 0.65 -- % of sales that the station gets. If they sell 4 Liters of Gas for $16 (not including taxes), they will get 16*Config.StationFuelSalePercentage back from the sale. Treat this as tax, also, it balances the profit margins a bit.
-Config.EmergencyShutOff = false -- When true, players can walk up to the ped and shut off the pumps at a gas station. While false, this option is disabled, because it can obviously be an issue. 
+Config.EmergencyShutOff = true -- When true, players can walk up to the ped and shut off the pumps at a gas station. While false, this option is disabled, because it can obviously be an issue. 
 Config.UnlimitedFuel = false -- When true, the fuel stations will not require refuelling by gas station owners, this is for the early stages of implementation.
-Config.MaxFuelReserves = 100000 -- This is the maximum amount that the fuel station's reserves can hold.
+Config.MaxFuelReserves = 30 * 100 -- This is the maximum amount that the fuel station's reserves can hold.
 Config.FuelReservesPrice = 2.0 -- This is the price of fuel reserves for gas station owners.
 Config.GasStationSellPercentage = 50 -- This is the percentage that players will get of the gas stations price, when they sell a location!
 Config.MinimumFuelPrice = 2 -- This is the minimum value you want to let players set their fuel prices to.
@@ -169,7 +169,10 @@ Config.ElectricVehicles = { -- List of Electric Vehicles in the Base Game.
     ["dilettante"] = {
         isElectric = true,
     },
-    ["khamelion"] = {
+    ["khamelion"] = {	-- vanilla modding
+        isElectric = true,
+    },
+    ["suranoe"] = {
         isElectric = true,
     },
 }
@@ -182,31 +185,58 @@ Config.NoFuelUsage = { -- This is for you to put vehicles that you don't want to
     ["bmx"] = {
         blacklisted = true
     },
+    ["tribike3"] = {
+        blacklisted = true
+    },
+    ["tribike2"] = {
+        blacklisted = true
+    },
+    ["tribike"] = {
+        blacklisted = true
+    },
+    ["fixter"] = {
+        blacklisted = true
+    },
+    ["cruiser"] = {
+        blacklisted = true
+    },
+    ["scorcher"] = {
+        blacklisted = true
+    },
+    ["iak_wheelchair"] = {
+        blacklisted = true
+    },
+    ["bus"] = {
+        blacklisted = true
+    },
+    ["coach"] = {
+        blacklisted = true
+    },
 }
 
 Config.Classes = { -- Class multipliers. If you want SUVs to use less fuel, you can change it to anything under 1.0, and vise versa.
-	[0] = 1.0, -- Compacts
+	[0] = 0.9, -- Compacts
 	[1] = 1.0, -- Sedans
-	[2] = 1.0, -- SUVs
+	[2] = 1.1, -- SUVs
 	[3] = 1.0, -- Coupes
-	[4] = 1.0, -- Muscle
+	[4] = 1.2, -- Muscle
 	[5] = 1.0, -- Sports Classics
-	[6] = 1.0, -- Sports
-	[7] = 1.0, -- Super
-	[8] = 1.0, -- Motorcycles
-	[9] = 1.0, -- Off-road
+	[6] = 1.1, -- Sports
+	[7] = 1.3, -- Super
+	[8] = 0.8, -- Motorcycles
+	[9] = 1.2, -- Off-road
 	[10] = 1.0, -- Industrial
 	[11] = 1.0, -- Utility
 	[12] = 1.0, -- Vans
 	[13] = 0.0, -- Cycles
-	[14] = 1.0, -- Boats
-	[15] = 1.0, -- Helicopters
-	[16] = 1.0, -- Planes
+	[14] = 0.8, -- Boats
+	[15] = 0.8, -- Helicopters
+	[16] = 0.9, -- Planes
 	[17] = 1.0, -- Service
 	[18] = 1.0, -- Emergency
 	[19] = 1.0, -- Military
 	[20] = 1.0, -- Commercial
-	[21] = 1.0, -- Trains
+	[21] = 0.8, -- Trains
 }
 
 Config.FuelUsage = { -- The left part is at percentage RPM, and the right is how much fuel (divided by 10) you want to remove from the tank every second
@@ -804,7 +834,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(175.9, -1546.65, 28.26, 224.29),
-        label = "Davis Avenue Ron",
+        label = "Station - Ron",
     },
     [2] = {
         zones = {
@@ -827,7 +857,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-51.09, -1767.02, 28.26, 47.16),
-        label = "Grove Street LTD",
+        label = "Station - LTD",
     },
     [3] = {
         zones = {
@@ -849,7 +879,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-514.06, -1216.25, 17.46, 66.29),
-        label = "Dutch London Xero",
+        label = "Station - Xero",
     },
     [4] = {
         zones = { 
@@ -873,7 +903,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-704.64, -935.71, 18.21, 90.02),
-        label = "Little Seoul LTD",
+        label = "Station - LTD",
     },
     [5] = {
         zones = {
@@ -895,7 +925,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(279.79, -1237.35, 28.35, 181.07),
-        label = "Strawberry Ave Xero",
+        label = "Station - Xero",
 
     },
     [6] = {
@@ -918,7 +948,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(834.27, -1028.7, 26.16, 88.39),
-        label = "Popular Street Ron",
+        label = "Station - Ron",
     },
     [7] = {
         zones = {
@@ -942,7 +972,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1194.41, -1394.44, 34.37, 270.3),
-        label = "Capital Blvd Ron",
+        label = "Station - Ron",
     },
     [8] = {
         zones = {
@@ -965,7 +995,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1168.38, -323.56, 68.3, 280.22),
-        label = "Mirror Park LTD",
+        label = "Station - LTD",
     },
     [9] = {
         zones = {
@@ -989,7 +1019,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(633.64, 247.22, 102.3, 60.29),
-        label = "Clinton Ave Globe Oil",
+        label = "Station - Globe Oil",
     },
     [10] = {
         zones = {
@@ -1011,7 +1041,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-1420.51, -278.76, 45.26, 137.35),
-        label = "North Rockford Ron",
+        label = "Station - Ron",
     },
     [11] = {
         zones = {
@@ -1035,7 +1065,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-2080.61, -338.52, 12.26, 352.21),
-        label = "Great Ocean Xero",
+        label = "Station - Xero",
     },
     [12] = {
         zones = {
@@ -1058,7 +1088,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords =vector4(-98.12, 6403.39, 30.64, 141.49),
-        label = "Paleto Blvd Xero",
+        label = "Station - Xero",
     },
     [13] = {
         zones = {
@@ -1082,7 +1112,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(181.14, 6636.17, 30.61, 179.96),
-        label = "Paleto Ron",
+        label = "Station - Ron",
     },
     [14] = {
         zones = {
@@ -1104,7 +1134,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1714.14, 6425.44, 31.79, 155.94),
-        label = "Paleto Globe Oil",
+        label = "Station - Globe Oil",
     },
     [15] = {
         zones = {
@@ -1128,7 +1158,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1703.57, 4937.23, 41.08, 55.74),
-        label = "Grapeseed LTD",
+        label = "Station - LTD",
     },
     [16] = {
         zones = {
@@ -1151,7 +1181,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1994.54, 3778.44, 31.18, 215.25),
-        label = "Sandy Shores Xero",
+        label = "Station - Xero",
     },
     [17] = {
         zones = {
@@ -1174,7 +1204,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1770.86, 3337.97, 40.43, 301.1),
-        label = "Sandy Shores Globe Oil",
+        label = "Station - Globe Oil",
     },
     [18] = {
         zones = {
@@ -1197,7 +1227,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(2690.25, 3265.62, 54.24, 58.98),
-        label = "Senora Freeway Xero",
+        label = "Station - Xero",
     },
     [19] = {
         zones = {
@@ -1222,7 +1252,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords  = vector4(1208.26, 2649.46, 36.85, 222.32),
-        label = "Harmony Globe Oil",
+        label = "Station - Globe Oil",
     },
     [20] = {
         zones = {
@@ -1245,7 +1275,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(1033.32, 2662.91, 38.55, 95.38),
-        label = "Route 68 Globe Oil",
+        label = "Station - Globe Oil",
     },
     [21] = {
         zones = {
@@ -1269,7 +1299,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(267.96, 2599.47, 43.69, 5.8),
-        label = "Route 68 Workshop Globe Oil",
+        label = "Station - Globe Oil",
     },
     [22] = {
         zones = {
@@ -1292,7 +1322,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(50.21, 2787.38, 56.88, 147.2),
-        label = "Route 68 Xero",
+        label = "Station - Xero",
     },
     [23] = {
         zones = {
@@ -1315,7 +1345,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-2570.04, 2317.1, 32.22, 21.29),
-        label = "Route 68 Ron",
+        label = "Station - Ron",
     },
     [24] = {
         zones = {
@@ -1339,7 +1369,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(2545.81, 2586.18, 36.94, 83.74),
-        label = "Rex's Diner Globe Oil",
+        label = "Station - Globe Oil",
     },
     [25] = {
         zones = {
@@ -1362,7 +1392,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(2561.24, 357.3, 107.62, 266.65),
-        label = "Palmino Freeway Ron",
+        label = "Station - Ron",
     },
     [26] = {
         zones = {
@@ -1384,7 +1414,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-1819.22, 798.51, 137.16, 315.13),
-        label = "North Rockford LTD",
+        label = "Station - LTD",
     },
     [27] = {
         zones = {
@@ -1406,7 +1436,7 @@ Config.GasStations = { -- Configuration options for various gas station related 
         },
         electriccharger = nil,
         electricchargercoords = vector4(-341.63, -1459.39, 29.76, 271.73),
-        label = "Alta Street Globe Oil",
+        label = "Station - Globe Oil",
     },
     --[[
     [28] = { -- Gabz Ottos Autos Location, Line In If Needed.
