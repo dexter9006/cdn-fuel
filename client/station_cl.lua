@@ -721,7 +721,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                 if NewName then
                     if Config.FuelDebug then print("Attempting to alter stations name!") end
                     if not NewName.newname then QBCore.Functions.Notify(Lang:t("station_name_invalid"), 'error', 7500) return end
-                    NewName = NewName.newname
+                    NewName = 'Station - '..NewName.newname
                     if type(NewName) ~= "string" then QBCore.Functions.Notify(Lang:t("station_name_invalid"), 'error') return end
                     if Config.ProfanityList[NewName] then QBCore.Functions.Notify(Lang:t("station_name_invalid"), 'error', 7500)
                         -- You can add logs for people that put prohibited words into the name changer if wanted, and here is where you would do it.
