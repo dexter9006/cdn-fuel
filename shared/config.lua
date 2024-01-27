@@ -270,7 +270,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 50.0
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -302,7 +302,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 78.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -330,7 +330,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 50.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -358,7 +358,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 19.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -386,7 +386,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 19.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -414,7 +414,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 10.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -442,7 +442,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 10.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -470,7 +470,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 8.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Watercraft",
+            --['draw_text'] = "[G] Refuel Watercraft",
             ['type'] = 'water',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -498,7 +498,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 37.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -526,7 +526,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 37.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -554,7 +554,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 47.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -582,7 +582,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 37.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Watercraft",
+            --['draw_text'] = "[G] Refuel Watercraft",
             ['type'] = 'water',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -614,7 +614,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 42.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -646,7 +646,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 10.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -674,7 +674,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 18.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -702,7 +702,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 18.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -730,7 +730,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 47.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Helicopter",
+            --['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -759,7 +759,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 47.50
                 },
             },
-            ['draw_text'] = "[G] Refuel Aircraft",
+            --['draw_text'] = "[G] Refuel Aircraft",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -792,7 +792,7 @@ Config.AirAndWaterVehicleFueling = {
         --             ['max'] = 38.67
         --         },
         --     },
-        --     ['draw_text'] = "[G] Refuel Aircraft",
+        --     --['draw_text'] = "[G] Refuel Aircraft",
         --     ['type'] = 'air',
         --     ['whitelist'] = {
         --         ['enabled'] = false,
