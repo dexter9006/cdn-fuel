@@ -172,6 +172,7 @@ Config.ElectricVehicles = { -- List of Electric Vehicles in the Base Game.
     ["khamelion"] = {	-- vanilla modding
         isElectric = true,
     },
+    -- Vitto modded
     ["suranoe"] = {
         isElectric = true,
     },
@@ -270,7 +271,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 50.0
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -302,7 +303,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 78.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -330,7 +331,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 50.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -614,7 +615,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 42.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = true,
@@ -646,7 +647,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 10.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -674,7 +675,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 18.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -702,7 +703,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 18.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
@@ -730,7 +731,7 @@ Config.AirAndWaterVehicleFueling = {
                     ['max'] = 47.50
                 },
             },
-            --['draw_text'] = "[G] Refuel Helicopter",
+            ['draw_text'] = "[G] Refuel Helicopter",
             ['type'] = 'air',
             ['whitelist'] = {
                 ['enabled'] = false,
