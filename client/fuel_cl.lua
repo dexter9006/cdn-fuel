@@ -2297,7 +2297,7 @@ AddEventHandler('onResourceStart', function(resource)
 								position = 'left-center'
 							})
 						else
-							exports[Config.Core]:DrawText(DrawText, 'left')
+							exports[Config.Core]:DrawText(DrawText, 'top')
 						end
 						
 						CreateThread(function()
@@ -2460,7 +2460,7 @@ AddEventHandler("QBCore:Client:OnPlayerLoaded", function ()
 							position = 'left-center'
 						})
 					else
-						exports[Config.Core]:DrawText(DrawText, 'left')
+						exports[Config.Core]:DrawText(DrawText, 'top')
 					end
 
 					CreateThread(function()
