@@ -675,32 +675,32 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				local wholetankcost = (tonumber(FuelPrice) * ReserveLevels)
 				local wholetankcostwithtax = math.ceil(tonumber(FuelPrice) * ReserveLevels + GlobalTax(wholetankcost))
 				fuel = lib.inputDialog('Gas Station', {
-					{ type = "input", label = 'Gasoline Price', default = '$'.. FuelPrice .. ' Per Liter', disabled = true },
-					{ type = "input", label = 'Current Fuel', default = finalfuel .. ' Per Liter', disabled = true },
-					{ type = "input", label = 'Required Full Tank', default = maxfuel .. 'Per Liter', disabled = true },
-					{ type = "input", label = 'Stations Available Gasoline', default = ReserveLevels, disabled = true },
-					{ type = "slider", label = 'Full Tank Cost: $' ..wholetankcostwithtax.. '',default = ReserveLevels, min = 0, max = ReserveLevels},
+					{ type = "input", label = 'Prix du carburant', default = '$'.. FuelPrice .. ' Par litre', disabled = true },
+					{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre', disabled = true },
+					{ type = "input", label = 'Plein requis', default = maxfuel .. 'Par litre', disabled = true },
+					{ type = "input", label = 'Stations disponibles d\'essence', default = ReserveLevels, disabled = true },
+					{ type = "slider", label = 'Coût d\'un plein : $' ..wholetankcostwithtax.. '', default = ReserveLevels, min = 0, max = ReserveLevels},
 				})
 				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #1") end return end
 				fuelAmount = tonumber(fuel[5])
-			else
+				else
 				fuel = lib.inputDialog('Gas Station', {
-					{ type = "input", label = 'Gasoline Price', default = '$'.. FuelPrice .. ' Per Liter', disabled = true },
-					{ type = "input", label = 'Current Fuel', default = finalfuel .. ' Per Liter', disabled = true },
-					{ type = "input", label = 'Required For A Full Tank', default = maxfuel, disabled = true },
-					{ type = "slider", label = 'Full Tank Cost: $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel },
+					{ type = "input", label = 'Prix de l\'essence', default = '$'.. FuelPrice .. ' Par litre', disabled = true },
+					{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre', disabled = true },
+					{ type = "input", label = 'Requis pour un plein', default = maxfuel, disabled = true },
+					{ type = "slider", label = 'Coût d\'un plein : $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel },
 				})
 				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #2") end return end
 				fuelAmount = tonumber(fuel[4])
-			end
-		else
-			fuel = lib.inputDialog('Gas Station', {
-				{ type = "input", label = 'Gasoline Price', default = '$'.. FuelPrice .. ' Per Liter',disabled = true },
-				{ type = "input", label = 'Current Fuel', default = finalfuel .. ' Per Liter',disabled = true },
-				{ type = "input", label = 'Required For A Full Tank', default = maxfuel, disabled = true },
-				{ type = "slider", label = 'Full Tank Cost: $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel},
-			})
-			if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #3") end return end
+				end
+				else
+				fuel = lib.inputDialog('Gas Station', {
+					{ type = "input", label = 'Prix de l\'essence', default = '$'.. FuelPrice .. ' Par litre',disabled = true },
+					{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre',disabled = true },
+					{ type = "input", label = 'Requis pour un plein', default = maxfuel, disabled = true },
+					{ type = "slider", label = 'Coût d\'un plein : $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel},
+				})
+				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #3") end return end
 			fuelAmount = tonumber(fuel[4])
 		end
 		if fuel then
@@ -731,42 +731,42 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				local wholetankcost = (FuelPrice * ReserveLevels)
 				local wholetankcostwithtax = math.ceil(FuelPrice * ReserveLevels + GlobalTax(wholetankcost))
 				fuel = exports['qb-input']:ShowInput({
-					header = "Select the Amount of Fuel<br>Current Price: $" ..
-					FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: $" ..
+					header = "Choisissez la quantité de carburant<br>Prix actuel : $" ..
+					FuelPrice .. " / Litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
 					wholetankcostwithtax .. "",
 					submitText = Lang:t("input_insert_nozzle"),
 					inputs = { {
 						type = 'number',
 						isRequired = true,
 						name = 'amount',
-						text = 'Only '..ReserveLevels..' Liters are available.'
+						text = 'Seulement '..ReserveLevels..' litres sont disponibles.'
 					}}
 				})
 			else
 				fuel = exports['qb-input']:ShowInput({
-					header = "Select the Amount of Fuel<br>Current Price: $" ..
-					FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: $" ..
+					header = "Sélectionnez la quantité de carburant<br>Prix actuel : $"
+					FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
 					wholetankcostwithtax .. "",
 					submitText = Lang:t("input_insert_nozzle"),
 					inputs = { {
 						type = 'number',
 						isRequired = true,
 						name = 'amount',
-						text = 'The Tank Can Hold ' .. maxfuel .. ' More Liters.'
+						text = 'Le réservoir peut contenir encore ' .. maxfuel .. ' litres.'
 					}}
 				})
 			end
 		else
 			fuel = exports['qb-input']:ShowInput({
-				header = "Select the Amount of Fuel<br>Current Price: $" ..
-				FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: $" ..
+				header = "Sélectionnez la quantité de carburant<br>Prix actuel : $" .. 
+				FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
 				wholetankcostwithtax .. "",
 				submitText = Lang:t("input_insert_nozzle"),
 				inputs = { {
 					type = 'number',
 					isRequired = true,
 					name = 'amount',
-					text = 'The Tank Can Hold ' .. maxfuel .. ' More Liters.'
+					text = 'Le réservoir peut contenir encore ' .. maxfuel .. ' litres.'
 				}}
 			})
 		end
@@ -822,7 +822,7 @@ RegisterNetEvent('cdn-fuel:client:SendMenuToServer', function(type)
 			if Config.Ox.Menu then
 				lib.registerContext({
 					id = 'cdnfueldmainmenu',
-					title = 'Gas Station',
+					title = 'Station Essence',
 					icon = "fas fa-gas-pump",
 					options = {
 						{
