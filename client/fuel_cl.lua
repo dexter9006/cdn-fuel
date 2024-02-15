@@ -732,7 +732,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				local wholetankcostwithtax = math.ceil(FuelPrice * ReserveLevels + GlobalTax(wholetankcost))
 				fuel = exports['qb-input']:ShowInput({
 					header = "Choisissez la quantité de carburant<br>Prix actuel : $" ..
-					FuelPrice .. " / Litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
+					FuelPrice .. " / Litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $" ..
 					wholetankcostwithtax .. "",
 					submitText = Lang:t("input_insert_nozzle"),
 					inputs = { {
@@ -744,8 +744,8 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				})
 			else
 				fuel = exports['qb-input']:ShowInput({
-					header = "Sélectionnez la quantité de carburant<br>Prix actuel : $"
-					FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
+					header = "Sélectionnez la quantité de carburant<br>Prix actuel : $" ..
+					FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $" ..
 					wholetankcostwithtax .. "",
 					submitText = Lang:t("input_insert_nozzle"),
 					inputs = { {
@@ -759,7 +759,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 		else
 			fuel = exports['qb-input']:ShowInput({
 				header = "Sélectionnez la quantité de carburant<br>Prix actuel : $" .. 
-				FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $"
+				FuelPrice .. " / litre <br> Carburant actuel : " .. finalfuel .. " litres <br> Coût d'un plein : $" ..
 				wholetankcostwithtax .. "",
 				submitText = Lang:t("input_insert_nozzle"),
 				inputs = { {
