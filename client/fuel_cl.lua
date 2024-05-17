@@ -683,7 +683,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				})
 				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #1") end return end
 				fuelAmount = tonumber(fuel[5])
-				else
+			else
 				fuel = lib.inputDialog('Gas Station', {
 					{ type = "input", label = 'Prix de l\'essence', default = '$'.. FuelPrice .. ' Par litre', disabled = true },
 					{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre', disabled = true },
@@ -692,15 +692,15 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				})
 				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #2") end return end
 				fuelAmount = tonumber(fuel[4])
-				end
-				else
-				fuel = lib.inputDialog('Gas Station', {
-					{ type = "input", label = 'Prix de l\'essence', default = '$'.. FuelPrice .. ' Par litre',disabled = true },
-					{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre',disabled = true },
-					{ type = "input", label = 'Requis pour un plein', default = maxfuel, disabled = true },
-					{ type = "slider", label = 'Coût d\'un plein : $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel},
-				})
-				if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #3") end return end
+			end
+		else
+			fuel = lib.inputDialog('Gas Station', {
+				{ type = "input", label = 'Prix de l\'essence', default = '$'.. FuelPrice .. ' Par litre',disabled = true },
+				{ type = "input", label = 'Carburant actuel', default = finalfuel .. ' Par litre',disabled = true },
+				{ type = "input", label = 'Requis pour un plein', default = maxfuel, disabled = true },
+				{ type = "slider", label = 'Coût d\'un plein : $' ..wholetankcostwithtax.. '', default = maxfuel, min = 0, max = maxfuel},
+			})
+			if not fuel then if Config.FuelDebug then print("Fuel Is Nil! #3") end return end
 			fuelAmount = tonumber(fuel[4])
 		end
 		if fuel then
